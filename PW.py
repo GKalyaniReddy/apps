@@ -1,6 +1,8 @@
 import streamlit as st
 import pickle
 credentials = {'GK': '123'}
+with open("admincredentials", 'wb') as ff:
+    pickle.dump(credentials,ff)
 with open("admincredentials", 'rb') as ff:
     credentials=pickle.load(ff)
     print(credentials)
