@@ -1,5 +1,5 @@
 import streamlit as st
-st.set_option('browser.gatherUsageStats', False)
+
 import pickle
 credentials = {'GK': '123'}
 with open("admincredentials", 'wb') as ff:
