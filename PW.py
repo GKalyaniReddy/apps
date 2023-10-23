@@ -1,18 +1,19 @@
 import streamlit as st
 import pickle
-#credentials = {'GK': '123'}
+#
 #with open("admincredentials", 'wb') as ff:
  #   pickle.dump(credentials,ff)
+credentials = {'GK': '123'}
 with open("admincredentials", 'rb') as ff:
     credentials=pickle.load(ff)
-    print(credentials)
+    #print(credentials)
 def main():
     st.title("Supermarket App")
 
     st.sidebar.header("Login")
     user_type = st.sidebar.radio("Select user type", ["Admin", "Customer"])
     login_flag = False
-    if user_type == "admin":
+    if user_type.lower() == "admin":
         st.sidebar.header("Admin Login")
         user_id = st.sidebar.text_input("Admin User ID")
         password = st.sidebar.text_input("Admin Password", type="password")
@@ -23,7 +24,7 @@ def main():
             else:
                 st.error("Admin login failed. Please check your credentials.")
 
-    elif user_type == "customer":
+    elif user_type.lower() == "customer":
         st.sidebar.header("Customer Login")
         user_id = st.sidebar.text_input("Customer User ID")
         password = st.sidebar.text_input("Customer Password", type="password")
