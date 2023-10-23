@@ -1,12 +1,10 @@
 import streamlit as st
 import pickle
-#
-#with open("admincredentials", 'wb') as ff:
- #   pickle.dump(credentials,ff)
+
+
 credentials = {'GK': '123'}
-with open("admincredentials", 'rb') as ff:
-    credentials=pickle.load(ff)
-    #print(credentials)
+with open("admincredentials", 'wb') as ff:
+   pickle.dump(credentials,ff)
 def main():
     st.title("Supermarket App")
 
