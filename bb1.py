@@ -19,7 +19,7 @@ def save_data(filename, data):
 show_app = False
 
 # Create a Streamlit app
-def main():
+def main(show_app):
     st.title("Supermarket App")
     
    
@@ -202,7 +202,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main(show_app=False)
 
 
 
