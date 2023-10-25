@@ -21,6 +21,7 @@ def save_data(filename, data):
 # Create a Streamlit app
 def main():
     st.title("Supermarket App")
+    st.write(show_app)
     show_app = False
     # Load or initialize login credentials
     credentials = load_data("admincredentials")
