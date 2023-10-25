@@ -21,7 +21,7 @@ show_app = False
 # Create a Streamlit app
 def main():
     st.title("Supermarket App")
-    st.write(show_app)
+    
    
     # Load or initialize login credentials
     credentials = load_data("admincredentials")
