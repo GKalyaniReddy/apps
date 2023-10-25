@@ -16,13 +16,13 @@ def load_data(filename):
 def save_data(filename, data):
     with open(filename, 'wb') as ff:
         pickle.dump(data, ff)
-
+show_app = False
 
 # Create a Streamlit app
 def main():
     st.title("Supermarket App")
     st.write(show_app)
-    show_app = False
+   
     # Load or initialize login credentials
     credentials = load_data("admincredentials")
 
