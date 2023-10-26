@@ -22,7 +22,7 @@ def save_data(filename, data):
 def main(show_app):
     st.title("Supermarket App")
 
-    st.write(show_app)
+    # st.write(show_app)
     # Load or initialize login credentials
     credentials = load_data("admincredentials")
 
