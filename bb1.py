@@ -65,6 +65,7 @@ def main(show_app):
                                             "View Cart", "Remove From Cart", "Edit Item"])
 
         if selected_option == "View Items":
+            st.write(show_app)
             st.header("Items Available in the Supermarket")
             if len(items) != 0:
                 for item in items:
@@ -74,6 +75,7 @@ def main(show_app):
                 st.write("No items available in the supermarket.")
 
         elif selected_option == "Add Item":
+            st.write(show_app)
             st.header("Add Item to the Supermarket")
             item_name = st.text_input("Item Name")
             item_quantity = st.number_input("Item Quantity", min_value=0)
